@@ -202,42 +202,179 @@ module.exports = router => {
                 "mutualFund": [{
                 "fundno":"11158584",
                 "companyname":"HSBC Mutual Funds",
-                "distributions": "5489 ₹",
-                "investmentcategory": "Debt - Ultra short-term funds",
-                "Type"	: "Open ended",
+                "distributions":"5489 ₹",
+                "investmentcategory":"short-term funds",
                 "Date":"20/2/2018"
             },
             {
                 "fundno":"4546465",
                 "companyname":"Bharati AXA MF",
                 "distributions": "25549 ₹",
-                "investmentcategory": "Debt - Ultra short-term funds",
-                "Type"	: 	"Open ended",
-                "Date":"20/2/2018"
+                "investmentcategory": "long-term funds",
+                "Date":"12/4/2018"
                 
             },
             {
                 "fundno":"5465468",
-                "companyname":"BNP Paribas Mutual Funds",
+                "companyname":"BNP Paribas ",
                 "distributions": "41549 ₹",
-                "investmentcategory": "Debt - Ultra short-term funds",
-                "Type"	: 	"Open ended",
-                "Date":"20/2/2018"
+                "investmentcategory": "short-term funds",
+                "Date":"11/12/2017"
                 
             },
             {
                 "fundno":"656546",                
-                "companyname":"IIFL Mutual Funds",
+                "companyname":"IIFL",
                 "distributions": "41549 ₹",
-                "investmentcategory": "Debt - Ultra short-term funds",
-                "Type"	: "Open ended",
-                "Date":"20/2/2018"
-                
+                "investmentcategory": "short-term funds",
+                "Date":"20/2/2018"  
             }
         ],
             
         })
     })
+
+    router.get("/mock/portfolio", (req, res) => {
+        res.send({
+
+            "Business": [{
+                
+                "Business":"IT services",
+                "Investment":"2554688565 ₹crore",
+                "TaxPaid":"1561465₹lacs",
+                "Profit":"58567863₹crore",
+                "Loss":"51126₹lacs",
+                "Status":"profit",
+                "TodayPrice":"54854216841234₹crore"
+                
+                
+            },{
+                "Business":"Product company",
+                "Investment":"6882554565 ₹crore",
+                "TaxPaid":"5611465₹lacs",
+                "Profit":"78585663₹crore",
+                "Loss":"26511₹lacs",
+                "Status":"profit",
+                "TodayPrice":"16841254854234₹crore"
+               
+            } ],
+            "assetDetails": [{
+                "car": "Lamborghini",
+                "amount":"4.5₹cr",
+                "currentValue":"2.4₹cr",
+
+                "car1": "ferrari",
+                "amount":"2.5₹cr",
+                "currentValue":"1.25₹cr",
+                
+                "car2": "duccati",
+                "amount":"8.5₹cr",
+                "currentValue":"4₹cr",
+                
+                "car3": "porsche",
+                "amount":"2.25₹cr",
+                "currentValue":"1.20₹cr",
+                
+                "car4": "bentley",
+                "amount":"1.7₹cr",
+                "currentValue":"80000₹lac"
+                
+            },{
+               "bike1":"Kawasaki ninja",
+               "amount":"1.7₹lac",
+               "currentValue":"1₹lac",
+               
+               "bike2":"buggati",
+               "amount":"2.2₹lac",
+               "currentValue":"1₹lac",
+               
+               "bike3":"Royal Enfield", 
+               "amount":"1.5₹lac",
+               "currentValue":"80000₹"
+               
+            } ],
+            "BankDetails": [{
+
+                    "bankname":"Swiss Bank",
+                    "balance": "54574633541 CHF ",
+                    "branch": "switzerland",
+                    "loan":"NA",
+                    "interest":"0%"
+                }, {
+                    "bankname": "SBI",
+                    "balance": " 46874981015 ₹ ",
+                    "branch": "India",
+                    "loan":"36548 ₹ lacs",
+                    "interest":"8%"
+                },
+                {
+                    "bankname": "world Bank",
+                    "balance": "4854798715 $",
+                    "branch": "America",
+                    "loan":"NA",
+                    "interest":"0%"
+                }
+            ],
+            "Companies_Owned": [{
+                    "companyname":"Infosys",
+                    "location":"Chennai",
+                    "Income": "548914695498 ₹crore"
+                },
+                {
+                    "companyname":"Hexaware",
+                    "location":"Chennai",
+                    "Income":"89796541657 ₹ crore"
+                },
+                {
+                    "companyname":"Rapidqube",
+                    "location":"Chennai",
+                    "Income":"45455487401 ₹ crore"
+                },
+                {
+                    "companyname":"Rapidqube",
+                    "location":"Mumbai",
+                    "Income":"65495729765426 ₹ crore"
+                }
+            ],
+            "PledgeFund": [{
+                    "Pledgedproperty":"Land",
+                    "InvestedAmount":"36548 ₹ lacs",
+                    "Currentstatus":"Invested",
+                    "Profit":"36 ₹ lacs",
+                    "Loss":"0",
+                    "Total":"1415562 ₹ lacs"
+            },
+            {
+                "Pledgedproperty":"Gold",
+                "InvestedAmount":"38 ₹ lacs",
+                "Currentstatus":"Invested",
+                "Profit":"36 ₹ lacs",
+                "Loss":"0",
+                "Total":"1415562 ₹ lacs"
+                
+            },
+            {
+                "Pledgedproperty":"Dmart Shares",
+                "InvestedAmount":"36548 ₹ lacs",
+                "Currentstatus":"Invested",
+                "Profit":"36 ₹ lacs",
+                "Loss":"0",
+                "Total":"1415562 ₹ lacs"
+                
+            },
+            {
+                "Pledgedproperty":"Apartment",
+                "InvestedAmount":"3655445 ₹ lacs",
+                "Currentstatus":"Invested",
+                "Profit":"36 ₹ lacs",
+                "Loss":"0",
+                "Total":"1415562 ₹ lacs"
+            }
+        ],
+            
+        })
+    })
+
 
 
 }
