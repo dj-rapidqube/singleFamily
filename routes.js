@@ -86,10 +86,11 @@ module.exports = router => {
     // -----------------------------Mock Services For UI Testing-----------------------------------------
 
     router.post("/mock/Login", (req, res) => {
+        console.log("body",req.body);
         var email = req.body.email;
-        var password = req.body.password;
-        console.log(JSON.stringify(req.body))
         console.log(email);
+        var password = req.body.password;
+        console.log(password)
         if (email === "admin@sfo.com") {
             res.send({
                 "message": "Login Successful",
@@ -104,12 +105,11 @@ module.exports = router => {
     })
 
     router.post("/mock/buildProfile", (req, res) => {
-        ``
+        
         console.log(req.body);
 
         res.send({
             "message": "Profile is Builded",
-            "status": true,
             "details": req.body
         })
     })
@@ -147,58 +147,94 @@ module.exports = router => {
         })
     })
     
-    router.post("/mock/getAssets", (req, res) => {
+    router.get("/mock/getAssets", (req, res) => {
         res.send({
 
             "assetDetails": [{
                 "car": "Lamborghini",
-                "car": "ferrari",
-                "car": "duccati",
-                "car": "porsche",
-                "car": "bentley"
+                "car1": "ferrari",
+                "car2": "duccati",
+                "car3": "porsche",
+                "car4": "bentley"
             },{
-               "bike":"Kawasaki ninja",
-               "bike":"buggati",
-               "bike":"Royal Enfield" 
+               "bike1":"Kawasaki ninja",
+               "bike2":"buggati",
+               "bike3":"Royal Enfield" 
             } ],
 
             "BankDetails": [{
 
-                    "bank name": "Swiss Bank",
-                    "balance": " 54574633541 CHF ",
+                    "bankname":"Swiss Bank",
+                    "balance": "54574633541 CHF ",
                     "branch": "switzerland",
                 }, {
-                    "bank Account": "SBI",
+                    "bankname": "SBI",
                     "balance": " 46874981015 ₹ ",
                     "branch": "India",
                 },
                 {
-                    "bank Account": "world Bank",
+                    "bankname": "world Bank",
                     "balance": "4854798715 $",
                     "branch": "America"
                 }
             ],
-            "Companies Owned": [{
-                    "company name": "Infosys",
-                    "location": "Chennai",
-                    "Income": "548914695498 ₹ crore"
+            "Companies_Owned": [{
+                    "companyname":"Infosys",
+                    "location":"Chennai",
+                    "Income": "548914695498 ₹crore"
                 },
                 {
-                    "company name": "Hexaware",
-                    "location": "Chennai",
-                    "Income": "89796541657 ₹ crore"
+                    "companyname":"Hexaware",
+                    "location":"Chennai",
+                    "Income":"89796541657 ₹ crore"
                 },
                 {
-                    "company name": "Rapidqube",
-                    "location": "Chennai",
-                    "Income": "45455487401 ₹ crore"
+                    "companyname":"Rapidqube",
+                    "location":"Chennai",
+                    "Income":"45455487401 ₹ crore"
                 },
                 {
-                    "company name": "Rapidqube",
-                    "location": "Mumbai",
-                    "Income": "65495729765426 ₹ crore"
+                    "companyname":"Rapidqube",
+                    "location":"Mumbai",
+                    "Income":"65495729765426 ₹ crore"
                 }
             ],
+                "mutualFund": [{
+                "fundno":"11158584",
+                "companyname":"HSBC Mutual Funds",
+                "distributions": "5489 ₹",
+                "investmentcategory": "Debt - Ultra short-term funds",
+                "Type"	: "Open ended",
+                "Date":"20/2/2018"
+            },
+            {
+                "fundno":"4546465",
+                "companyname":"Bharati AXA MF",
+                "distributions": "25549 ₹",
+                "investmentcategory": "Debt - Ultra short-term funds",
+                "Type"	: 	"Open ended",
+                "Date":"20/2/2018"
+                
+            },
+            {
+                "fundno":"5465468",
+                "companyname":"BNP Paribas Mutual Funds",
+                "distributions": "41549 ₹",
+                "investmentcategory": "Debt - Ultra short-term funds",
+                "Type"	: 	"Open ended",
+                "Date":"20/2/2018"
+                
+            },
+            {
+                "fundno":"656546",                
+                "companyname":"IIFL Mutual Funds",
+                "distributions": "41549 ₹",
+                "investmentcategory": "Debt - Ultra short-term funds",
+                "Type"	: "Open ended",
+                "Date":"20/2/2018"
+                
+            }
+        ],
             
         })
     })
